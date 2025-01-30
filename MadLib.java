@@ -117,22 +117,29 @@ public class MadLib
 
 	public String getRandomVerb()
 	{
+		Random randy = new Random();
+		int 5 = randy.nextInt(15) + 1;
 
-		return "";
+		return ""+5;
 	}
 
 	public String getRandomNoun()
 	{
-		return "";
+		Random randy = new Random();
+		int x = ready.nextInt(20) + 1;
+		return "" + x;
 	}
 
 	public String getRandomAdjective()
 	{
-		return "";
+		Random randy = new Random();
+		int y = randy.nextInt(17) + 1;
+		return "" + y;
 	}
 
 	public String toString()
 	{
+		
 		return "";
 	}
 }

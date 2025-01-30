@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -20,24 +20,49 @@ public class MadLib
 
 	public MadLib()
 	{
-
+		verbs.add("punched");
+		nouns.add("Wal-mart");
+		adjectives.add("massive");
+		story = "I punched Wal-mart in a massive way";
 	}
 
 	public MadLib(String fileName)
 	{
 		//load stuff
+		loadAdjectives();
+		loadNouns();
+		loadVerbs();
+	
+
 
 		try
 		{
 			//Read the different parts of the story and concatenate the resulting
 			//story using the symbols to tell you the parts of speech
+			for(i=0; i<story; i++)
+			if(story.indexOf(#) || story.indexOf(@) || story.indexOf(&))
+			count++;
 
+			return #;
+			return @;
+			return &;
+
+		
 
 			//While there is more of the story, read in the word/symbol
+			while (reader.hasNext)
+				if(reader.story(#))
+				story.add(getRandomNoun);
+
+				if(reader.story(@))
+				story.add(getRandomVerb);
+
+				if(reader.story(&))
+				story.add(getRandomAdjective);
 
 				//If what was read in is one of the symbols, find a random
 				//word to replace it.
-			}
+			
 
 
 		}
@@ -52,7 +77,12 @@ public class MadLib
 	{
 		try
 		{
+			Scanner reader = new Scanner(new File("nouns.dat"));
 
+			while(reader.hasNext());
+			{
+				nouns.add(reader.next());
+			}
 		}
 		catch(Exception e)
 		{
@@ -87,6 +117,7 @@ public class MadLib
 
 	public String getRandomVerb()
 	{
+
 		return "";
 	}
 

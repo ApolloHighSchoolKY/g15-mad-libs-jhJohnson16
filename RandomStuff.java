@@ -7,7 +7,7 @@ public class RandomStuff {
     public static void main (String[] args)
     {
     	//Math.random version
-    	int x = (int)(Math.random()*50 + 1);
+    	int x = (int)(Math.random()*50 - 10);
 
     	System.out.println(x);
 
@@ -17,7 +17,16 @@ public class RandomStuff {
 
     	System.out.println(y);
 
-    }
+		//range from -3 to 8
+		System.out.println((int)(Math.random()*12-3));
+		System.out.println(rand.nextInt(12)-3);
+
+
+		//Range from 13 to 27
+		System.out.println((int)(Math.random()*15+13));
+		System.out.println(rand.nextInt(15)+13);
+	
+	}
 
 
 }

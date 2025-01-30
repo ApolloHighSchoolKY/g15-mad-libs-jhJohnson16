@@ -39,8 +39,10 @@ public class MadLib
 		{
 			//Read the different parts of the story and concatenate the resulting
 			//story using the symbols to tell you the parts of speech
+			Scanner storyScan = new Scanner(new file("story.dat"))
+
 			for(i=0; i<story; i++)
-			if(story.indexOf(#) || story.indexOf(@) || story.indexOf(&))
+			if(story.storyScan("#") || story.storyScan("@") || story.storyScan("&"))
 			count++;
 
 			return #;
@@ -50,14 +52,14 @@ public class MadLib
 		
 
 			//While there is more of the story, read in the word/symbol
-			while (reader.hasNext)
-				if(reader.story(#))
+			while (reader.Next)
+				if(reader.story("#"))
 				story.add(getRandomNoun);
 
-				if(reader.story(@))
+				 else if(reader.story("@"))
 				story.add(getRandomVerb);
 
-				if(reader.story(&))
+				else if(reader.story("&"))
 				story.add(getRandomAdjective);
 
 				//If what was read in is one of the symbols, find a random
@@ -95,7 +97,12 @@ public class MadLib
 	{
 		try
 		{
+			Scanner readerTwo = new Scanner(new File("verbs.dat"));
 
+			while(readerTwo.hasNext());
+			{
+				verbs.add(readerTwo.next());
+			}
 		}
 		catch(Exception e)
 		{
@@ -107,7 +114,12 @@ public class MadLib
 	{
 		try
 		{
+			Scanner readerThree = new Scanner(new File("adjectives.dat"));
 
+			while(readerThree.hasNext());
+			{
+				adjectives.add(readerThree.next());
+			}
 		}
 		catch(Exception e)
 		{
@@ -117,29 +129,28 @@ public class MadLib
 
 	public String getRandomVerb()
 	{
-		Random randy = new Random();
-		int 5 = randy.nextInt(15) + 1;
+		int spot = Math.random()*verbs.size();
 
-		return ""+5;
+		return "" + verbs.get(spot);
 	}
 
 	public String getRandomNoun()
 	{
-		Random randy = new Random();
-		int x = ready.nextInt(20) + 1;
-		return "" + x;
+		Random rand = new Random();
+		
+		return "" + nouns.get(rand.nextInt(nouns.size()));
 	}
 
 	public String getRandomAdjective()
 	{
-		Random randy = new Random();
-		int y = randy.nextInt(17) + 1;
-		return "" + y;
+		int spot = Math.random()*adjectives.size();
+		
+		return "" + adjectives.get(spot);
 	}
 
 	public String toString()
 	{
-		
+
 		return "";
 	}
 }
